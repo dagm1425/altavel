@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local environment variables (secrets)
+.env
+.env.*
+!.env.example
+
+# Temporary server build used by scripts/prerender.mjs
+dist-server

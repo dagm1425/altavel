@@ -1,5 +1,207 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import '@fontsource-variable/geist';
+@import '@fontsource/instrument-serif/400.css';
+@import '@fontsource/instrument-serif/400-italic.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Geist Variable', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-highlight: var(--highlight);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Palette borrowed from agencecartier.com: ink, white, stone, khaki, lime. */
+@theme {
+  --color-ink: #010202;
+  --color-stone: #d8d7cb;
+  --color-khaki: #bfbda8;
+  --color-lime: #d0ff71;
+  --color-paper: #f7f7f7;
+}
 
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --breakpoint-3xl: 120rem;
+}
+
+/* Content column width: one value for header, sections and footer. */
+:root {
+  --site-width: 64rem;
+}
+@media (width >= 80rem) {
+  :root {
+    --site-width: 72rem;
+  }
+}
+@media (width >= 96rem) {
+  :root {
+    --site-width: 84rem;
+  }
+}
+@media (width >= 120rem) {
+  :root {
+    --site-width: 100rem;
+  }
+}
+
+/* Light sections (white) */
+:root {
+  --background: #ffffff;
+  --foreground: #010202;
+  --card: #ffffff;
+  --card-foreground: #010202;
+  --popover: #ffffff;
+  --popover-foreground: #010202;
+  --primary: #d0ff71;
+  --primary-foreground: #010202;
+  --secondary: #f7f7f7;
+  --secondary-foreground: #010202;
+  --muted: #f7f7f7;
+  --muted-foreground: #636363;
+  --accent: #f0efe8;
+  --accent-foreground: #010202;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e6e5dd;
+  --input: #bfbda8;
+  --ring: #010202;
+  --highlight: #010202;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* Stone sections */
+.stone {
+  --background: #d8d7cb;
+  --foreground: #010202;
+  --card: #e3e2d8;
+  --card-foreground: #010202;
+  --popover: #e3e2d8;
+  --popover-foreground: #010202;
+  --secondary: #e3e2d8;
+  --secondary-foreground: #010202;
+  --muted: #cdccbe;
+  --muted-foreground: #55544a;
+  --accent: #cdccbe;
+  --accent-foreground: #010202;
+  --border: #bfbda8;
+  --input: #a9a790;
+  --ring: #010202;
+  --highlight: #010202;
+}
+
+/* Dark (ink) sections */
+.dark {
+  --background: #010202;
+  --foreground: #ffffff;
+  --card: #111212;
+  --card-foreground: #ffffff;
+  --popover: #111212;
+  --popover-foreground: #ffffff;
+  --primary: #d0ff71;
+  --primary-foreground: #010202;
+  --secondary: #1a1b1b;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1b1b;
+  --muted-foreground: #bfbda8;
+  --accent: #1f2020;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgb(255 255 255 / 12%);
+  --input: rgb(255 255 255 / 22%);
+  --ring: #d0ff71;
+  --highlight: #d0ff71;
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* Full-bleed section background: paints the section's theme edge to edge
+   while its content stays in the centered max-w-5xl column. */
+@utility band {
+  position: relative;
+  isolation: isolate;
+  color: var(--foreground);
+  &::before {
+    content: '';
+    position: absolute;
+    inset-block: 0;
+    left: 50%;
+    z-index: -1;
+    width: 100vw;
+    translate: -50% 0;
+    background-color: var(--background);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply scroll-smooth font-sans;
+  }
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
 }

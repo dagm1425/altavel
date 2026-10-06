@@ -1,19 +1,53 @@
-import { ArrowRight } from 'lucide-react'
+import { Band } from '@/components/band'
+import { Seo } from '@/components/seo'
+import { HeroSection } from '@/components/sections/hero'
+import { LogoCarousel } from '@/components/sections/logo-carousel'
+import Services from '@/components/shadcn-space/radix/blocks/services-01/services'
+import { WhyAltavelSection } from '@/components/sections/why-altavel'
+import AboutAndStats from '@/components/shadcn-space/radix/blocks/about-us-01'
+import { EngagementModelsSection } from '@/components/sections/engagement-models'
+import { AudienceSection } from '@/components/sections/audience'
+import { ProcessSection } from '@/components/sections/process'
+import { ExpertiseSection } from '@/components/sections/expertise'
+import { FaqsSection } from '@/components/sections/faqs'
+import { CallToAction } from '@/components/sections/cta'
 
 function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6 bg-white px-4 text-center text-slate-900">
-      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Altavel, coming soon</h1>
-      <p className="max-w-xl text-lg text-slate-600">
-        Vite + React + Tailwind CSS is ready. Start building in <code>src/pages/Home.jsx</code>.
-      </p>
-      <a
-        href="#"
-        className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-3 font-medium text-white hover:bg-slate-700"
-      >
-        Get started <ArrowRight className="size-4" />
-      </a>
-    </main>
+    <>
+      <Seo path="/" />
+      <HeroSection />
+      <Band tone="dark">
+        <LogoCarousel />
+      </Band>
+      <Band>
+        <Services />
+      </Band>
+      <Band tone="stone">
+        <WhyAltavelSection />
+      </Band>
+      <Band>
+        <AboutAndStats />
+      </Band>
+      <Band tone="dark">
+        <EngagementModelsSection />
+      </Band>
+      <Band>
+        <AudienceSection />
+      </Band>
+      <Band tone="stone">
+        <ProcessSection />
+      </Band>
+      <Band>
+        <ExpertiseSection />
+      </Band>
+      <Band tone="stone">
+        <FaqsSection />
+      </Band>
+      <Band tone="dark">
+        <CallToAction />
+      </Band>
+    </>
   )
 }
 
