@@ -19,8 +19,8 @@ import {
   TrendingUpIcon,
 } from 'lucide-react'
 
-// Placeholder address: replace with Altavel's real careers inbox.
-const careersEmail = 'careers@altavel.com'
+// Careers inbox on the company domain. Needs a mailbox or forwarding set up for altaveltech.com.
+const careersEmail = 'careers@altaveltech.com'
 
 // Placeholder benefits: confirm against Altavel's actual package.
 const benefits = [
