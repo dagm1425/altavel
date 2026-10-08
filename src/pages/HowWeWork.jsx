@@ -18,63 +18,49 @@ import {
   UserRoundCheckIcon,
 } from 'lucide-react'
 
-const models = ['Staff Augmentation', 'Dedicated Team', 'Project Delivery']
+const models = ['Fixed-Scope Project', 'Phased Product Build', 'Support & Evolution Plan']
 
 const comparison = [
   {
-    label: 'Who manages the work',
-    values: ['You', 'Altavel delivery lead, with you', 'Altavel'],
-  },
-  {
-    label: 'Team composition',
-    values: ['Individual engineers', 'Cross-functional squad', 'Team shaped by project scope'],
-  },
-  {
-    label: 'Pricing',
-    values: ['Monthly, per engineer', 'Monthly, per team', 'Milestone-based'],
+    label: 'Best for',
+    values: [
+      'Clear, well-defined builds',
+      'New products and MVPs',
+      'Software that is already live',
+    ],
   },
   {
     label: 'Scope',
-    values: ['Flexible', 'Evolving roadmap', 'Defined up front'],
+    values: ['Agreed in full up front', 'Agreed one phase at a time', 'Ongoing, set each month'],
   },
   {
-    label: 'Scaling',
-    values: ['Add or remove monthly', 'Grow the squad as needed', 'Change requests'],
+    label: 'Pricing',
+    values: ['Fixed price per milestone', 'Fixed price per phase', 'Monthly plan'],
   },
   {
-    label: 'Best for',
-    values: ['Adding capacity fast', 'Long-term product work', 'Well-scoped builds'],
-  },
-]
-
-const vettingSteps = [
-  {
-    title: 'Profile screening',
-    description: 'We review experience, past projects, and stack depth against the role.',
+    label: 'You see progress',
+    values: ['Demo every two weeks', 'Demo every two weeks', 'Monthly report and release notes'],
   },
   {
-    title: 'Technical interview',
-    description: 'Senior engineers assess architecture thinking, trade-offs, and fundamentals.',
+    label: 'Changes',
+    values: [
+      'Priced and approved first',
+      'Planned into the next phase',
+      'Included in monthly hours',
+    ],
   },
   {
-    title: 'Live coding',
-    description: 'A practical session on a realistic problem, not trivia or puzzles.',
-  },
-  {
-    title: 'Communication check',
-    description: 'We confirm fluent English and the ability to work with distributed teams.',
-  },
-  {
-    title: 'References & background',
-    description: 'Reference calls and background screening before anyone meets you.',
+    label: 'At the end',
+    values: ['Full handover and docs', 'A product ready to grow', 'Software that stays healthy'],
   },
 ]
 
 const standards = [
   {
-    title: 'Weekly demos',
+    title: 'Demos every two weeks',
     icon: <MonitorPlayIcon />,
-    description: 'See working software every week, not slide decks or status emails.',
+    description:
+      'See working software at the end of every sprint, not slide decks or status emails.',
   },
   {
     title: 'Shared boards',
@@ -99,8 +85,8 @@ function ComparisonSection() {
       <SectionHeading
         className="px-4"
         eyebrow="Compare"
-        title="Which model fits your team?"
-        description="A quick side-by-side to help you choose. You can always switch later."
+        title="Which option fits your project?"
+        description="A quick side-by-side to help you choose. Many clients start with one and move to another as the product grows."
       />
       <div className="relative">
         <FullWidthDivider position="top" />
@@ -150,10 +136,10 @@ function StandardsSection() {
         eyebrow="Delivery standards"
         title={
           <>
-            What you can expect, <Accent>every week</Accent>
+            What you can expect, <Accent>on every project</Accent>
           </>
         }
-        description="The same delivery habits apply to every engagement, whatever the model."
+        description="The same delivery habits apply to every project, whichever option you choose."
       />
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {standards.map((item) => (
@@ -173,10 +159,10 @@ function HowWeWork() {
           eyebrow="How we work"
           title={
             <>
-              A partnership model built for <Accent>speed and clarity</Accent>
+              A clear process, <Accent>no surprises</Accent>
             </>
           }
-          description="Choose how you want to work with us, see exactly how we vet engineers, and know what to expect from the first call onward."
+          description="See the ways to start a project with us, the four stages every project follows, and the standards we hold ourselves to on every release."
         >
           <Button asChild size="lg">
             <Link to="/contact">
@@ -193,16 +179,6 @@ function HowWeWork() {
       </Band>
       <Band>
         <ProcessSection />
-      </Band>
-      <Band tone="dark">
-        <ProcessSection
-          description="Every Altavel engineer passes a five-stage process before they ever join a client team."
-          eyebrow="Vetting"
-          gridClassName="lg:grid-cols-5"
-          id="vetting"
-          steps={vettingSteps}
-          title="How we vet engineers"
-        />
       </Band>
       <Band tone="stone">
         <StandardsSection />

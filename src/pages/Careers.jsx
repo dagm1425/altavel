@@ -52,7 +52,7 @@ const benefits = [
   {
     title: 'Flexible work',
     icon: <HouseIcon />,
-    description: 'Remote-friendly schedules built around your client team.',
+    description: 'Remote-friendly schedules built around your project team.',
   },
 ]
 
@@ -71,7 +71,8 @@ const hiringSteps = [
   },
   {
     title: 'Offer & matching',
-    description: 'We make an offer and match you with a client team that fits your skills.',
+    description:
+      'We make an offer and match you with a project that fits your skills and interests.',
   },
 ]
 
@@ -104,7 +105,7 @@ function BenefitsSection() {
             A place to grow, <Accent>not just a job</Accent>
           </>
         }
-        description="We keep great engineers by investing in them. That is also why our clients' teams stay together."
+        description="We keep great engineers by investing in them. That is also why our clients work with the same people from kickoff to launch."
       />
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {benefits.map((benefit) => (
@@ -170,7 +171,7 @@ function Careers() {
               Do the best work of <Accent>your career</Accent>
             </>
           }
-          description="Join a team of senior engineers building products for ambitious companies, with the pay, growth, and support you deserve."
+          description="Join a team of engineers and designers building custom software for ambitious companies, with the pay, growth, and support you deserve."
         >
           <Button asChild size="lg">
             <a href="#open-roles">

@@ -8,146 +8,107 @@ import { PageHero } from '@/components/sections/page-hero'
 import { Accent } from '@/components/sections/section-heading'
 import { ExpertiseSection } from '@/components/sections/expertise'
 import { CallToAction } from '@/components/sections/cta'
-import {
-  ArrowRightIcon,
-  BadgeCheckIcon,
-  BrainCircuitIcon,
-  CheckIcon,
-  CloudIcon,
-  Code2Icon,
-  HeadsetIcon,
-  UserPlusIcon,
-  UsersIcon,
-} from 'lucide-react'
+import { ArrowRightIcon, CheckIcon } from 'lucide-react'
 
 const services = [
   {
-    id: 'dedicated-teams',
-    icon: UsersIcon,
-    title: 'Dedicated Teams',
-    summary:
-      'A long-term, cross-functional team that works only on your product. We handle hiring, HR, equipment, and retention. You set the priorities.',
-    includes: [
-      'A team shaped around your roadmap',
-      'A delivery lead as your single point of contact',
-      'Weekly demos and transparent reporting',
-      'Fast replacements if someone is not the right fit',
-      'Team size that scales month to month',
-    ],
-    roles: [
-      'Frontend',
-      'Backend',
-      'Full-stack',
-      'Mobile',
-      'QA',
-      'DevOps',
-      'Product designer',
-      'Delivery manager',
-    ],
-  },
-  {
-    id: 'staff-augmentation',
-    icon: UserPlusIcon,
-    title: 'Staff Augmentation',
-    summary:
-      'Add senior engineers to your in-house team within weeks. They work in your tools, follow your processes, and report to your managers.',
-    includes: [
-      'Candidate profiles shortlisted within days',
-      'You interview and approve every engineer',
-      'Engineers dedicated full-time to your project',
-      'Payroll, HR, and equipment handled by Altavel',
-      'Flexible, month-to-month engagement',
-    ],
-    roles: [
-      'React',
-      'Node.js',
-      'Python',
-      'Java',
-      '.NET',
-      'Go',
-      'iOS & Android',
-      'Data engineering',
-    ],
-  },
-  {
     id: 'custom-software',
-    icon: Code2Icon,
     title: 'Custom Software Development',
+    navTitle: 'Custom Software',
     summary:
-      'End-to-end delivery of web and mobile products. We take you from idea to production with a clear scope, milestones, and post-launch support.',
+      'When off-the-shelf tools stop fitting, we build software around the way your business actually works: platforms, internal tools, portals, and the integrations that tie them together.',
     includes: [
-      'Discovery and technical scoping',
-      'UX/UI design and prototyping',
-      'Architecture and development',
-      'QA, launch, and handover',
-      'Ongoing maintenance and support',
+      'Discovery, requirements, and technical scoping',
+      'Software architecture and system design',
+      'Integrations with your existing tools and APIs',
+      'Data migration from spreadsheets or old systems',
+      'Documentation and a full handover',
     ],
-    roles: ['Solution architect', 'Product designer', 'Engineers', 'QA', 'Project manager'],
+    roles: ['Solution architect', 'Delivery lead', 'Full-stack engineers', 'QA engineer'],
+  },
+  {
+    id: 'web-mobile',
+    title: 'Web & Mobile Apps',
+    summary:
+      'Fast, accessible web applications and iOS and Android apps, built native or cross-platform depending on what your users and budget need.',
+    includes: [
+      'Web apps, customer portals, and dashboards',
+      'Native iOS and Android apps',
+      'Cross-platform apps with React Native or Flutter',
+      'App Store and Google Play release',
+      'Analytics, crash reporting, and performance tuning',
+    ],
+    roles: ['Frontend engineers', 'Mobile engineers', 'Backend engineer', 'QA engineer'],
+  },
+  {
+    id: 'ui-ux-design',
+    title: 'UI/UX Design',
+    summary:
+      'Product design that makes complex software feel simple, grounded in research with real users and handed to engineering ready to build.',
+    includes: [
+      'User research and product discovery',
+      'Wireframes and clickable prototypes',
+      'Visual design and branding for products',
+      'Design systems and component libraries',
+      'Accessibility and usability reviews',
+    ],
+    roles: ['Product designer', 'UX researcher', 'Design engineer'],
   },
   {
     id: 'ai-data',
-    icon: BrainCircuitIcon,
     title: 'AI & Data',
     summary:
-      'Bring AI into your product with features that hold up in production, built on solid data engineering.',
+      'AI features that hold up in production, built on solid data engineering, from assistants and document processing to analytics your team will actually use.',
     includes: [
-      'LLM integrations and AI agents',
-      'Search and retrieval over your own data',
-      'Data pipelines and warehouses',
-      'Analytics dashboards and reporting',
-      'ML model deployment and monitoring',
+      'LLM-powered features and AI agents',
+      'Search and question answering over your own data',
+      'Document processing and workflow automation',
+      'Data pipelines, warehouses, and dashboards',
+      'Model evaluation, monitoring, and cost control',
     ],
-    roles: ['AI engineer', 'ML engineer', 'Data engineer', 'Data analyst'],
+    roles: ['AI engineer', 'Data engineer', 'ML engineer', 'Data analyst'],
   },
   {
-    id: 'cloud-devops',
-    icon: CloudIcon,
-    title: 'Cloud & DevOps',
+    id: 'legacy-modernization',
+    title: 'Legacy Modernization',
     summary:
-      'Modern infrastructure that is secure, observable, and cost-efficient, so your team can ship often and sleep well.',
+      'Aging systems hold businesses back, but rewrites are risky. We modernize in safe, staged steps so the business keeps running while the software improves.',
     includes: [
-      'Cloud migration to AWS, Azure, or Google Cloud',
-      'CI/CD pipelines',
-      'Infrastructure as code',
-      'Monitoring, alerting, and on-call',
-      'Cloud cost optimization',
+      'Assessment of your current system and risks',
+      'A step-by-step modernization roadmap',
+      'Re-platforming to a modern, supported stack',
+      'Moving on-premise systems to the cloud',
+      'Safe data migration with parallel runs',
     ],
-    roles: ['DevOps engineer', 'Site reliability engineer', 'Cloud architect'],
+    roles: ['Solution architect', 'Backend engineers', 'Cloud engineer', 'QA engineer'],
   },
   {
-    id: 'qa-testing',
-    icon: BadgeCheckIcon,
-    title: 'QA & Testing',
+    id: 'it-consulting',
+    title: 'IT Audit & Consulting',
     summary:
-      'Quality built into every sprint, from test strategy to automated suites that run on every commit.',
+      'An independent, plain-language review of your infrastructure, security, and code, with a prioritized plan for what to fix first and what it will cost.',
     includes: [
-      'Test strategy and planning',
-      'Manual and exploratory testing',
-      'UI and API test automation',
-      'Performance and load testing',
-      'Release regression testing',
+      'Infrastructure and application audits',
+      'Security and access reviews',
+      'Code quality and architecture reviews',
+      'Technology roadmaps and cloud cost reviews',
+      'Compliance readiness support',
     ],
-    roles: ['QA engineer', 'QA automation engineer', 'Performance tester'],
+    roles: ['Solution architect', 'Security engineer', 'Cloud engineer'],
   },
   {
-    id: 'customer-support',
-    icon: HeadsetIcon,
-    title: 'Customer Support',
+    id: 'maintenance-support',
+    title: 'Maintenance & Support',
     summary:
-      'Trained, fluent support agents who answer your customers over chat, email, and phone. They work in your helpdesk, follow your playbooks, and speak in your brand voice.',
+      'Software needs care after launch. We keep it healthy, secure, and improving, and we can support your users too, with response times agreed in writing.',
     includes: [
-      'Chat, email, and phone support',
-      'Tier 1 and technical tier 2 support',
-      'Agents trained on your product and tone',
-      'Coverage across time zones, including after hours',
-      'Quality reviews and CSAT reporting',
+      'Monitoring, updates, and security patches',
+      'Bug fixes with agreed response times',
+      'Cloud hosting and DevOps management',
+      'Helpdesk and end-user support agents',
+      'Monthly hours for improvements and new features',
     ],
-    roles: [
-      'Support agent',
-      'Technical support specialist',
-      'Support team lead',
-      'Quality analyst',
-    ],
+    roles: ['Support engineer', 'DevOps engineer', 'Support agents', 'Delivery lead'],
   },
 ]
 
@@ -159,12 +120,9 @@ function ServiceDetail({ service, index }) {
     >
       <FullWidthDivider position="bottom" />
       <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-3">
-          <span className="text-muted-foreground font-mono text-sm">
-            {String(index + 1).padStart(2, '0')}
-          </span>
-          <service.icon className="size-6" strokeWidth={1.5} />
-        </div>
+        <span className="text-muted-foreground font-mono text-sm">
+          {String(index + 1).padStart(2, '0')}
+        </span>
         <h2 className="text-3xl font-medium tracking-tight md:text-4xl">{service.title}</h2>
         <p className="text-muted-foreground leading-relaxed">{service.summary}</p>
         <div>
@@ -193,7 +151,7 @@ function ServiceDetail({ service, index }) {
         </div>
         <div>
           <h3 className="text-highlight mb-3 font-mono text-xs tracking-widest uppercase">
-            Typical roles
+            Who works on it
           </h3>
           <ul className="flex flex-wrap gap-2">
             {service.roles.map((role) => (
@@ -220,10 +178,10 @@ function Services() {
           eyebrow="Services"
           title={
             <>
-              Engineering capacity, <Accent>exactly how you need it</Accent>
+              Software services, <Accent>end to end</Accent>
             </>
           }
-          description="From a single senior engineer to a full product team, Altavel covers the skills modern software companies need to build, scale, and support their products."
+          description="Seven practices, one accountable team. Start with a single build, audit, or redesign, and keep the same people when it is time to support and grow it."
         >
           <Button asChild size="lg">
             <Link to="/contact">
@@ -236,7 +194,7 @@ function Services() {
         </PageHero>
         <nav
           aria-label="Services on this page"
-          className="relative flex flex-wrap justify-center gap-2 px-4 pb-12"
+          className="relative mx-auto flex max-w-2xl flex-wrap justify-center gap-2 px-4 pb-12"
         >
           {services.map((service) => (
             <a
@@ -244,7 +202,7 @@ function Services() {
               href={`#${service.id}`}
               key={service.id}
             >
-              {service.title}
+              {service.navTitle || service.title}
             </a>
           ))}
         </nav>

@@ -11,7 +11,7 @@ import {
   HeroColorPanelsRoot,
   HeroColorPanelsVisual,
 } from '@/components/ui/hero-color-panel'
-import { ArrowRightIcon, PhoneCallIcon } from 'lucide-react'
+import { ArrowRightIcon } from 'lucide-react'
 
 // Shader tuned to the Cartier-inspired palette: lime, khaki, stone, olive.
 const shaderColors = { colors: ['#d0ff71', '#bfbda8', '#d8d7cb', '#8fae2c'] }
@@ -29,21 +29,19 @@ export function HeroSection() {
             {/* Same styling as the component's default heading, but as the page's h1. */}
             <HeroColorPanelsHeading>
               <h1 className="3xl:text-8xl relative mb-0 text-3xl font-medium tracking-[-0.04em] text-balance sm:text-4xl md:text-5xl lg:tracking-[-0.06em] xl:text-6xl 2xl:text-7xl">
-                Senior engineering teams, <br />
-                <Accent>ready when you are</Accent>
+                Custom software, <br />
+                <Accent>built to last</Accent>
               </h1>
             </HeroColorPanelsHeading>
-            <HeroColorPanelsDescription description="Altavel builds and embeds dedicated software and customer support teams for startups, product companies, and enterprises. Vetted engineers, transparent delivery, and teams onboarded in weeks, not months." />
+            <HeroColorPanelsDescription description="Altavel is a software engineering company. We design, build, and support web, mobile, and AI products for growing businesses, with clear milestones and code you own from day one." />
             <HeroColorPanelsActions className="flex-wrap gap-3">
               <Button asChild size="lg">
                 <Link to="/contact">
-                  <PhoneCallIcon data-icon="inline-start" /> Book a call
+                  Start a project <ArrowRightIcon data-icon="inline-end" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link to="/services">
-                  Explore services <ArrowRightIcon data-icon="inline-end" />
-                </Link>
+                <Link to="/services">Explore services</Link>
               </Button>
             </HeroColorPanelsActions>
           </HeroColorPanelsContent>

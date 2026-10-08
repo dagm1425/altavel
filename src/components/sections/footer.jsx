@@ -22,8 +22,8 @@ export function Footer() {
             <Logo />
           </Link>
           <p className="text-muted-foreground max-w-sm text-sm text-balance">
-            Altavel builds dedicated software engineering teams for startups, product companies, and
-            enterprises.
+            Altavel designs, builds, and supports custom software for startups, product companies,
+            and enterprises.
           </p>
           <div className="flex gap-2">
             {socialLinks.map((item) => (
@@ -67,13 +67,13 @@ export function Footer() {
 }
 
 const services = [
-  { title: 'Dedicated Teams', href: '/services#dedicated-teams' },
-  { title: 'Staff Augmentation', href: '/services#staff-augmentation' },
   { title: 'Custom Software', href: '/services#custom-software' },
+  { title: 'Web & Mobile Apps', href: '/services#web-mobile' },
+  { title: 'UI/UX Design', href: '/services#ui-ux-design' },
   { title: 'AI & Data', href: '/services#ai-data' },
-  { title: 'Cloud & DevOps', href: '/services#cloud-devops' },
-  { title: 'QA & Testing', href: '/services#qa-testing' },
-  { title: 'Customer Support', href: '/services#customer-support' },
+  { title: 'Legacy Modernization', href: '/services#legacy-modernization' },
+  { title: 'IT Audit & Consulting', href: '/services#it-consulting' },
+  { title: 'Maintenance & Support', href: '/services#maintenance-support' },
 ]
 
 const company = [

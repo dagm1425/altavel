@@ -8,7 +8,7 @@ function DefaultActions() {
   return (
     <Button asChild size="lg">
       <Link to="/contact">
-        Book a call <ArrowRightIcon data-icon="inline-end" />
+        Start a project <ArrowRightIcon data-icon="inline-end" />
       </Link>
     </Button>
   )
@@ -17,10 +17,10 @@ function DefaultActions() {
 export function CallToAction({
   title = (
     <>
-      Ready to <Accent>build your team?</Accent>
+      Have a project <Accent>in mind?</Accent>
     </>
   ),
-  description = 'Tell us what you are building. Within one business day we will send a recommended team shape, timeline, and estimate.',
+  description = 'Tell us what you want to build or fix. Within one business day we will reply with next steps and a time to talk through scope.',
   children = <DefaultActions />,
 }) {
   return (

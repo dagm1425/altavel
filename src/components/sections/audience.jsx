@@ -74,15 +74,16 @@ export function AudienceSection() {
               </Label>
               <div className="flex flex-col gap-6">
                 <p className="text-xl font-medium text-white lg:text-2xl">
-                  Ship your MVP and find product-market fit without burning runway on hiring.
+                  Turn your idea into a product people can use, and find product-market fit before
+                  the runway runs out.
                 </p>
                 <Points
                   className="border-white/15 text-white/80 [&>li]:border-white/15"
                   iconClassName="text-primary"
                   points={[
-                    'MVPs in weeks, not quarters',
-                    'Senior engineers at a startup budget',
-                    'Scale the team after you raise',
+                    'Prototype before you commit',
+                    'Milestone-based pricing',
+                    'Built to scale after you raise',
                   ]}
                 />
               </div>
@@ -90,17 +91,17 @@ export function AudienceSection() {
           </Card>
         </BentoItem>
 
-        {/* Facts & numbers (placeholder figure: replace before launch) */}
+        {/* Facts & numbers: matches the two-week release cadence promised elsewhere on the site. */}
         <BentoItem className="lg:col-span-4" delay={0.2} isInView={isInView}>
           <Card className="bg-primary h-full w-full rounded-2xl border p-8 ring-0 md:min-h-96">
             <CardContent className="flex h-full flex-col items-start justify-between gap-16 p-0">
               <Label className="text-primary-foreground/70">Facts & numbers</Label>
               <div className="flex flex-col items-start gap-4">
                 <p className="text-primary-foreground text-5xl font-medium tracking-tight lg:text-6xl">
-                  2–4 wks
+                  2 weeks
                 </p>
                 <p className="text-primary-foreground text-xl font-medium lg:text-2xl">
-                  from first call to a team shipping code.
+                  between working releases you can test.
                 </p>
               </div>
             </CardContent>
@@ -116,14 +117,14 @@ export function AudienceSection() {
                   Product companies
                 </Label>
                 <p className="text-xl font-medium text-white lg:text-2xl">
-                  Increase roadmap velocity with engineers who plug straight into your team.
+                  Ship new products and features without hiring a whole new department.
                 </p>
               </div>
               <ul className="flex flex-col gap-2 text-sm text-white/80">
                 {[
-                  'Clear the backlog faster',
-                  'Fill hard-to-hire skill gaps',
-                  'Keep core knowledge in-house',
+                  'New products and major features',
+                  'Specialists in AI, mobile, and data',
+                  'Documented handover, no lock-in',
                 ].map((point) => (
                   <li className="flex items-center gap-2" key={point}>
                     <CheckIcon className="text-primary size-3.5 shrink-0" />
@@ -164,7 +165,7 @@ export function AudienceSection() {
                 points={[
                   'Legacy modernization',
                   'Security and compliance first',
-                  'Dedicated delivery management',
+                  'IT audits and technology roadmaps',
                 ]}
               />
             </CardContent>

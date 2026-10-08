@@ -8,34 +8,34 @@ import { ArrowRightIcon, CheckIcon } from 'lucide-react'
 
 const models = [
   {
-    name: 'Staff Augmentation',
-    bestFor: 'Teams that need to add senior capacity fast.',
+    name: 'Fixed-Scope Project',
+    bestFor: 'Well-defined builds with clear requirements.',
     points: [
-      'You direct the day-to-day work',
-      'Engineers join your tools and rituals',
-      'Scale up or down month to month',
-      'We handle payroll, HR, and equipment',
+      'Scope, price, and dates agreed up front',
+      'Payment tied to delivered milestones',
+      'Working demo every two weeks',
+      'Full handover with code and documentation',
     ],
   },
   {
-    name: 'Dedicated Team',
-    bestFor: 'Product companies building for the long term.',
+    name: 'Phased Product Build',
+    bestFor: 'New products and MVPs that will grow.',
     featured: true,
     points: [
-      'Cross-functional squad with a delivery lead',
-      'We hire, manage, and retain the team',
-      'Shared roadmap with weekly demos',
-      'Grows with your product, not your overhead',
+      'Discovery and prototype before the build',
+      'Launch a focused first version quickly',
+      'Plan each next phase on real user feedback',
+      'The same team from first sprint to scale',
     ],
   },
   {
-    name: 'Project Delivery',
-    bestFor: 'Well-defined products with a clear scope.',
+    name: 'Support & Evolution Plan',
+    bestFor: 'Software that is live and needs to keep improving.',
     points: [
-      'Discovery, design, build, and launch',
-      'Milestone-based plan and pricing',
-      'Fixed timeline with weekly progress',
-      'Post-launch support and maintenance',
+      'Monitoring, updates, and security patches',
+      'Bug fixes with response times in writing',
+      'Monthly hours for new features',
+      'Helpdesk support for your users',
     ],
   },
 ]
@@ -45,9 +45,9 @@ export function EngagementModelsSection() {
     <section className="flex flex-col gap-14 py-16 md:py-24" id="engagement">
       <SectionHeading
         className="px-4"
-        eyebrow="Engagement models"
-        title="Work with us the way that fits"
-        description="Start with one engineer or a full team. Switch models as your product and budget evolve."
+        eyebrow="Ways to work with us"
+        title="Pick the path that fits your project"
+        description="Every option comes with the same team, the same standards, and code you own. Choose based on how defined your project is today."
       />
 
       <div className="relative">
@@ -72,7 +72,7 @@ export function EngagementModelsSection() {
                 <h3 className="text-xl font-medium">{model.name}</h3>
                 {model.featured && (
                   <span className="bg-primary text-primary-foreground rounded-full px-2.5 py-0.5 text-xs font-medium">
-                    Most popular
+                    Most chosen
                   </span>
                 )}
               </div>
@@ -90,7 +90,7 @@ export function EngagementModelsSection() {
               </ul>
               <Button asChild className="w-full" variant={model.featured ? 'default' : 'outline'}>
                 <Link to="/contact">
-                  Discuss this model <ArrowRightIcon data-icon="inline-end" />
+                  Discuss your project <ArrowRightIcon data-icon="inline-end" />
                 </Link>
               </Button>
             </div>

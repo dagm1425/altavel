@@ -24,22 +24,22 @@ import {
 
 const values = [
   {
-    title: 'Client commitment',
+    title: 'Own the outcome',
     icon: <HandshakeIcon />,
     description:
-      'We measure success by your outcomes, not hours billed. If something is not working, we say so early and fix it.',
+      'We measure success by whether the software works for your business, not by hours billed. If something is off, we say so early and fix it.',
   },
   {
-    title: 'Process transparency',
+    title: 'Work in the open',
     icon: <EyeIcon />,
     description:
-      'Shared boards, weekly demos, and honest reporting. You always know who is on your team and what they are doing.',
+      'Shared boards, demos every two weeks, and honest reporting. You always know what is being built, by whom, and what it costs.',
   },
   {
-    title: 'Talent retention',
+    title: 'Build to last',
     icon: <HeartHandshakeIcon />,
     description:
-      'Great engineers stay where they grow. We invest in pay, learning, and wellbeing so your team stays together.',
+      'Clean architecture, tests, and documentation are part of the job, so your software is easy to run, extend, and hand over for years.',
   },
 ]
 
@@ -82,23 +82,24 @@ function StorySection() {
       <div className="flex flex-col gap-3">
         <p className="text-highlight font-mono text-xs tracking-widest uppercase">Our story</p>
         <h2 className="3xl:text-6xl text-3xl font-medium tracking-tight text-balance md:text-5xl">
-          Outsourcing, rebuilt around <Accent>people</Accent>
+          Software that fits <Accent>the business</Accent>
         </h2>
       </div>
       {/* Placeholder story: replace with Altavel's own founding story. */}
       <div className="text-muted-foreground flex flex-col gap-4 leading-relaxed md:pt-8">
         <p>
-          Altavel started with a simple observation: most outsourcing relationships fail not because
-          of talent, but because of churn, poor communication, and work that happens out of sight.
+          Altavel started with a simple observation: growing businesses keep bending their work
+          around tools that were never built for them, and most software projects that try to fix
+          this run late, over budget, or out of sight.
         </p>
         <p>
-          So we built a company that does the opposite. We hire senior engineers, pay them well, and
-          embed them in our clients&apos; teams as true colleagues, with full visibility into the
-          work and the people doing it.
+          So we built a software company that works the opposite way: a written scope before the
+          first line of code, a working release every two weeks, and code that belongs to our
+          clients from day one.
         </p>
         <p>
-          Today we help startups, product companies, and enterprises build and scale software, while
-          giving talented engineers a place to do the best work of their careers.
+          Today we design, build, and support custom software for startups, product companies, and
+          enterprises, from first prototypes to systems their whole business runs on.
         </p>
       </div>
     </section>
@@ -111,7 +112,7 @@ function ValuesSection() {
       <SectionHeading
         eyebrow="Our values"
         title="What we stand for"
-        description="Three principles shape how we hire, how we deliver, and how we treat the people we work with."
+        description="Three principles shape how we plan, build, and support every piece of software we ship."
       />
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {values.map((value) => (
@@ -170,14 +171,14 @@ function About() {
           eyebrow="About Altavel"
           title={
             <>
-              We build engineering teams that <Accent>last</Accent>
+              We build software <Accent>that lasts</Accent>
             </>
           }
-          description="Altavel is a software engineering partner for companies that want senior talent, transparent delivery, and teams that stay together."
+          description="Altavel is a software engineering company building custom web, mobile, and AI products with clear milestones and code our clients own."
         >
           <Button asChild size="lg">
             <Link to="/contact">
-              Work with us <ArrowRightIcon data-icon="inline-end" />
+              Start a project <ArrowRightIcon data-icon="inline-end" />
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline">
@@ -197,7 +198,7 @@ function About() {
       <Band tone="stone">
         <ClientsSection />
       </Band>
-      <Band tone="dark">
+      <Band>
         <SecuritySection />
       </Band>
       <Band tone="dark">

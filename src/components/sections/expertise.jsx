@@ -2,14 +2,14 @@ import { cn } from '@/lib/utils'
 import { FullWidthDivider } from '@/components/full-width-divider'
 import { SectionHeading } from '@/components/sections/section-heading'
 import {
-  BarChart3Icon,
-  CloudUploadIcon,
-  GitBranchIcon,
-  GlobeIcon,
-  PenToolIcon,
-  ShoppingCartIcon,
-  SmartphoneIcon,
-  SparklesIcon,
+  BriefcaseIcon,
+  HeartPulseIcon,
+  HouseIcon,
+  LandmarkIcon,
+  RocketIcon,
+  ScaleIcon,
+  ShoppingBagIcon,
+  TruckIcon,
 } from 'lucide-react'
 
 const technologies = [
@@ -36,9 +36,9 @@ export function ExpertiseSection() {
     <section className="flex flex-col gap-14 py-16 md:py-24" id="expertise">
       <SectionHeading
         className="px-4"
-        eyebrow="Expertise"
-        title="Deep skills across the modern stack"
-        description="From the first prototype to systems serving millions of users, our engineers have shipped it before."
+        eyebrow="Industries"
+        title="Industries we build for"
+        description="Domain knowledge matters as much as code. These are the industries where our clients run their businesses, and the stack we use to build for them."
       />
       <div className="relative">
         <FullWidthDivider position="top" />
@@ -91,43 +91,44 @@ export function FeatureCard({ feature, className, ...props }) {
 
 const features = [
   {
-    title: 'Web Development',
-    icon: <GlobeIcon />,
-    description: 'Fast, accessible web apps and platforms built on modern frameworks.',
+    title: 'Healthcare',
+    icon: <HeartPulseIcon />,
+    description:
+      'Patient-facing apps, care platforms, and benefits tools built with privacy in mind.',
   },
   {
-    title: 'Mobile Apps',
-    icon: <SmartphoneIcon />,
-    description: 'Native and cross-platform iOS and Android apps users love.',
+    title: 'Fintech & Banking',
+    icon: <LandmarkIcon />,
+    description: 'Payments, wealth, and banking software where security and accuracy come first.',
   },
   {
-    title: 'Generative AI',
-    icon: <SparklesIcon />,
-    description: 'LLM integrations, AI agents, and retrieval systems in production.',
+    title: 'Logistics',
+    icon: <TruckIcon />,
+    description: 'Freight, tracking, and operations software that keeps goods and data moving.',
   },
   {
-    title: 'Data & Analytics',
-    icon: <BarChart3Icon />,
-    description: 'Pipelines, warehouses, and dashboards that turn data into decisions.',
+    title: 'Retail & Supply Chain',
+    icon: <ShoppingBagIcon />,
+    description: 'Commerce platforms, supplier integrations, and inventory and order systems.',
   },
   {
-    title: 'Cloud Migration',
-    icon: <CloudUploadIcon />,
-    description: 'Move legacy workloads to the cloud with zero-drama cutovers.',
+    title: 'Real Estate',
+    icon: <HouseIcon />,
+    description: 'Listing, transaction, and property platforms for buyers, sellers, and agents.',
   },
   {
-    title: 'DevOps & SRE',
-    icon: <GitBranchIcon />,
-    description: 'CI/CD, infrastructure as code, observability, and on-call support.',
+    title: 'HR & Payroll',
+    icon: <BriefcaseIcon />,
+    description: 'People, payroll, and workforce tools that handle sensitive employee data.',
   },
   {
-    title: 'E-commerce',
-    icon: <ShoppingCartIcon />,
-    description: 'Storefronts, checkout flows, and integrations that convert.',
+    title: 'Legal',
+    icon: <ScaleIcon />,
+    description: 'Self-service legal products, document workflows, and client portals.',
   },
   {
-    title: 'UI/UX Design',
-    icon: <PenToolIcon />,
-    description: 'Product design, design systems, and prototypes ready for engineering.',
+    title: 'SaaS & Startups',
+    icon: <RocketIcon />,
+    description: 'New products and MVPs, built to launch quickly and scale after the next round.',
   },
 ]

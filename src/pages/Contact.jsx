@@ -14,10 +14,10 @@ function Contact() {
           eyebrow="Contact"
           title={
             <>
-              Let&apos;s talk about <Accent>your team</Accent>
+              Let&apos;s talk about <Accent>your project</Accent>
             </>
           }
-          description="Tell us what you are building. We will recommend the right team shape and engagement model, with no obligation."
+          description="Tell us what you want to build, fix, or modernize. We will suggest the right first step and give you a clear estimate, with no obligation."
         />
       </Band>
       <Band>

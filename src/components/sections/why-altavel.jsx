@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import { DecorIcon } from '@/components/decor-icon'
 import { Accent, SectionHeading } from '@/components/sections/section-heading'
-import { BadgeCheckIcon, EyeIcon, HeartHandshakeIcon, ShieldCheckIcon } from 'lucide-react'
+import { BadgeCheckIcon, FileCheck2Icon, KeyRoundIcon, UsersRoundIcon } from 'lucide-react'
 
 export function WhyAltavelSection() {
   return (
@@ -10,10 +10,10 @@ export function WhyAltavelSection() {
         eyebrow="Why Altavel"
         title={
           <>
-            Outsourcing that feels like <Accent>your own team</Accent>
+            A software partner, <Accent>not a black box</Accent>
           </>
         }
-        description="Most outsourcing fails on communication, churn, and hidden work. We built Altavel to fix all three."
+        description="Software projects go wrong when scope is vague, progress is hidden, and nobody owns the result. Here is how we prevent all three."
       />
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -63,27 +63,27 @@ export function FeatureCard({ feature, className, ...props }) {
 
 const features = [
   {
-    title: 'Senior, vetted talent',
+    title: 'One accountable team',
+    icon: <UsersRoundIcon />,
+    description:
+      'A named delivery lead owns your project, and the engineers who scope the work are the ones who build it.',
+  },
+  {
+    title: 'Written scope & milestones',
+    icon: <FileCheck2Icon />,
+    description:
+      'Requirements, acceptance criteria, and dates are agreed before we write code. Changes are priced before they are built.',
+  },
+  {
+    title: 'You own everything',
+    icon: <KeyRoundIcon />,
+    description:
+      'Code, cloud accounts, and documentation live in your accounts from day one. No lock-in, ever.',
+  },
+  {
+    title: 'Quality on every release',
     icon: <BadgeCheckIcon />,
     description:
-      'Every engineer passes technical interviews, a live coding round, and a communication check before you meet them.',
-  },
-  {
-    title: 'Transparent delivery',
-    icon: <EyeIcon />,
-    description:
-      'Weekly demos, shared boards, and clear reporting. You always know what is being built and what it costs.',
-  },
-  {
-    title: 'Built for retention',
-    icon: <HeartHandshakeIcon />,
-    description:
-      'Competitive pay, growth paths, and real benefits keep engineers on your product for the long run.',
-  },
-  {
-    title: 'Security & IP protection',
-    icon: <ShieldCheckIcon />,
-    description:
-      'NDAs, IP assignment, secure devices, and strict access controls are standard from day one.',
+      'Code review, automated tests, and a working demo every two weeks, so problems surface early.',
   },
 ]

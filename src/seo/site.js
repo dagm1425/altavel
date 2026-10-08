@@ -8,7 +8,7 @@ export const DEFAULT_OG_IMAGE = '/og-image.png'
 export const ORGANIZATION = {
   name: 'Altavel',
   description:
-    'Altavel is an IT outsourcing company that builds dedicated software engineering and customer support teams for startups, product companies, and enterprises.',
+    'Altavel is a custom software development company in Austin, TX, that designs, builds, and supports web, mobile, and AI software for growing businesses.',
   address: {
     streetAddress: '9705 Burnet Road Suite 102',
     addressLocality: 'Austin',
@@ -22,34 +22,34 @@ export const ORGANIZATION = {
 // have real content.
 export const PAGES = {
   '/': {
-    title: 'Altavel | IT Outsourcing & Dedicated Software Teams',
+    title: 'Altavel | Custom Software Development Company in Austin',
     description:
-      'Altavel is an Austin-based IT outsourcing company providing dedicated software engineering and customer support teams for startups and enterprises.',
+      'Altavel designs, builds, and supports custom web, mobile, and AI software for growing businesses, with clear milestones and code you own. Austin, TX.',
   },
   '/services': {
-    title: 'Software Development Services | Altavel',
+    title: 'Custom Software, Web & Mobile App Services | Altavel',
     description:
-      'Dedicated teams, staff augmentation, custom software, AI & data, cloud & DevOps, QA, and customer support, from experienced, vetted teams.',
+      'Custom software, web and mobile apps, UI/UX design, AI & data, legacy modernization, IT audits, and maintenance & support from one team.',
   },
   '/how-we-work': {
-    title: 'How We Work: Engagement Models & Process | Altavel',
+    title: 'How We Work: Project Options & Process | Altavel',
     description:
-      'Compare staff augmentation, dedicated teams, and project delivery, see how we vet engineers, and what to expect from day one.',
+      'Fixed-scope projects, phased product builds, or ongoing support. See the four stages every project follows and the standards behind every release.',
   },
   '/about': {
-    title: 'About Altavel | IT Outsourcing Partner in Austin, TX',
+    title: 'About Altavel | Software Development Company, Austin TX',
     description:
-      'Altavel builds engineering teams that last, based on transparency, talent retention, and ownership, with security and IP protection built in.',
+      'Altavel builds custom software that lasts, with written scope, a working release every two weeks, and code our clients own from day one.',
   },
   '/careers': {
-    title: 'Careers at Altavel | Remote Software Engineering Jobs',
+    title: 'Careers at Altavel | Software Engineering & Design Jobs',
     description:
-      'Join Altavel as a senior engineer. Competitive pay, learning budget, clear growth paths, and remote-friendly work with great client teams.',
+      'Join Altavel to build custom software for ambitious companies. Competitive pay, learning budget, clear growth paths, and remote-friendly work.',
   },
   '/contact': {
-    title: 'Contact Altavel | Talk to Us About Your Team',
+    title: 'Contact Altavel | Start Your Software Project',
     description:
-      'Tell us what you are building. Within one business day we send a recommended team shape, timeline, and estimate. Austin, TX.',
+      'Tell us what you want to build, fix, or modernize. Within one business day we reply with next steps, then send a written scope and estimate.',
   },
   '/privacy': {
     title: 'Privacy Policy | Altavel',
@@ -119,14 +119,14 @@ export function getStructuredData(siteUrl) {
     address: { '@type': 'PostalAddress', ...ORGANIZATION.address },
     areaServed: 'US',
     knowsAbout: [
-      'IT outsourcing',
-      'Dedicated software development teams',
-      'Staff augmentation',
       'Custom software development',
+      'Web application development',
+      'Mobile app development',
+      'UI/UX design',
       'AI and data engineering',
-      'Cloud and DevOps',
-      'QA and software testing',
-      'Customer support outsourcing',
+      'Legacy software modernization',
+      'IT audit and consulting',
+      'Software maintenance and support',
     ],
   }
   if (siteUrl) {

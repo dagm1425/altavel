@@ -4,32 +4,32 @@ import { SectionHeading } from '@/components/sections/section-heading'
 
 const steps = [
   {
-    title: 'Discovery call',
+    title: 'Discovery & scope',
     description:
-      'Tell us about your product, stack, and goals. We recommend the right team shape and engagement model.',
+      'We map your goals, users, and constraints, then agree a written scope, budget, and milestones before any code is written.',
   },
   {
-    title: 'Shortlist in days',
+    title: 'Design & build',
     description:
-      'Review hand-picked engineer profiles and interview your favorites. You make the final call.',
+      'Prototypes first, then development in two-week sprints. You review a working release at the end of every one.',
   },
   {
-    title: 'Onboard & kick off',
+    title: 'Test & launch',
     description:
-      'We handle contracts, equipment, and access. Your new team starts shipping in the first week.',
+      'Automated and manual testing, performance and security checks, then a careful release with monitoring in place.',
   },
   {
-    title: 'Scale with confidence',
+    title: 'Support & grow',
     description:
-      'Regular check-ins, performance reviews, and flexible scaling as your roadmap changes.',
+      'After launch we keep your software healthy, fix issues fast, and plan the next improvements with you.',
   },
 ]
 
 export function ProcessSection({
   id = 'process',
   eyebrow = 'How it works',
-  title = 'From first call to shipping code in weeks',
-  description = 'A simple, predictable process with no long procurement cycles and no surprises.',
+  title = 'A clear path from idea to launch',
+  description = 'Every project follows the same four stages, so you always know what is being built, what it costs, and what comes next.',
   steps: items = steps,
   gridClassName = 'lg:grid-cols-4',
 }) {

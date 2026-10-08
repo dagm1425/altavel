@@ -39,7 +39,7 @@ export function Header() {
             {navLinks.map((link) => (
               <Button
                 asChild
-                className="aria-[current=page]:bg-muted"
+                className="aria-[current=page]:bg-white/15 aria-[current=page]:text-white"
                 key={link.label}
                 size="sm"
                 variant="ghost"
@@ -49,7 +49,7 @@ export function Header() {
             ))}
           </div>
           <Button asChild size="sm">
-            <Link to="/contact">Book a call</Link>
+            <Link to="/contact">Start a project</Link>
           </Button>
         </div>
         <MobileNav />

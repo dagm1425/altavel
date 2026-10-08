@@ -4,55 +4,80 @@ import { Card, CardContent } from '@/components/ui/card'
 import { SectionHeading } from '@/components/sections/section-heading'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
-import { ArrowUpRight, BrainCircuit, Cloud, Code2, Headset, UserPlus, Users } from 'lucide-react'
+import {
+  ArrowUpRight,
+  BrainCircuit,
+  Code2,
+  History,
+  LifeBuoy,
+  MonitorSmartphone,
+  PenTool,
+  ShieldCheck,
+} from 'lucide-react'
 
+// The seven practices. Each card links to its section on the Services page.
 const serviceData = [
   {
-    service_icon: Users,
-    service_title: 'Dedicated Teams',
+    id: 'custom-software',
+    service_icon: Code2,
+    service_title: 'Custom Software',
     service_description:
-      'A cross-functional squad that works only on your product: engineers, QA, and a delivery lead, all managed by us.',
+      'Platforms, internal tools, and integrations designed around how your business actually works.',
     service_bg_color: 'bg-ink',
     service_text_color: 'text-white',
   },
   {
-    service_icon: UserPlus,
-    service_title: 'Staff Augmentation',
+    id: 'web-mobile',
+    service_icon: MonitorSmartphone,
+    service_title: 'Web & Mobile Apps',
     service_description:
-      'Add vetted senior engineers to your in-house team. They join your standups, your tools, and your roadmap.',
+      'Fast web apps and native or cross-platform iOS and Android apps your users enjoy.',
     service_bg_color: 'bg-stone',
     service_text_color: 'text-ink',
   },
   {
-    service_icon: Code2,
-    service_title: 'Custom Software',
+    id: 'ui-ux-design',
+    service_icon: PenTool,
+    service_title: 'UI/UX Design',
     service_description:
-      'End-to-end delivery of web and mobile products, from discovery and architecture through launch and support.',
+      'Research, prototypes, and design systems that make complex products feel simple.',
     service_bg_color: 'bg-stone',
     service_text_color: 'text-ink',
   },
   {
+    id: 'ai-data',
     service_icon: BrainCircuit,
     service_title: 'AI & Data',
     service_description:
-      'LLM-powered features, data pipelines, and analytics built on production-grade engineering foundations.',
+      'LLM features, AI agents, data pipelines, and analytics built for production.',
     service_bg_color: 'bg-stone',
     service_text_color: 'text-ink',
   },
   {
-    service_icon: Cloud,
-    service_title: 'Cloud & DevOps',
+    id: 'legacy-modernization',
+    service_icon: History,
+    service_title: 'Legacy Modernization',
     service_description:
-      'Cloud migrations, CI/CD pipelines, infrastructure as code, and monitoring that keeps every release boring.',
+      'Move aging systems to a modern stack in safe, staged steps, without stopping the business.',
     service_bg_color: 'bg-stone',
     service_text_color: 'text-ink',
   },
   {
-    service_icon: Headset,
-    service_title: 'Customer Support',
+    id: 'it-consulting',
+    service_icon: ShieldCheck,
+    service_title: 'IT Audit & Consulting',
     service_description:
-      'Trained, fluent support agents who answer your customers over chat, email, and phone, in your helpdesk and your voice.',
-    service_bg_color: 'bg-lime',
+      'Independent reviews of your infrastructure, security, and code, with a clear roadmap.',
+    service_bg_color: 'bg-stone',
+    service_text_color: 'text-ink',
+  },
+  {
+    id: 'maintenance-support',
+    service_icon: LifeBuoy,
+    service_title: 'Maintenance & Support',
+    service_description:
+      'Monitoring, fixes, cloud and DevOps, and helpdesk support for your users after launch.',
+    service_bg_color: 'bg-stone',
     service_text_color: 'text-ink',
   },
 ]
@@ -67,7 +92,7 @@ const Services = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: (index % 3) * 0.15,
+        delay: (index % 4) * 0.12,
         duration: 0.6,
         ease: 'easeInOut',
       },
@@ -79,27 +104,37 @@ const Services = () => {
       <div className="flex w-full flex-col items-center justify-center gap-10 sm:gap-16">
         <SectionHeading
           eyebrow="Services"
-          title="Everything you need to build, scale, and support your product"
-          description="Pick a single specialist or a full team. Everyone we place is experienced, vetted, and ready to contribute from week one."
+          title="From first idea to production, and beyond"
+          description="Start with a single build, audit, or redesign. Most clients keep us on to support and grow what we ship together."
         />
-        <div className="flex w-full flex-col items-center justify-center gap-8 sm:gap-12">
-          {/* services */}
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {serviceData.map((service, index) => (
-              <motion.div
-                key={service.service_title}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={index}
-                className="h-full"
-              >
-                <Card className={cn('h-full p-8 ring-0', service.service_bg_color)}>
-                  <CardContent className="flex h-full flex-col items-start justify-between gap-10 p-0">
+        {/* 7 practices + a "where to start" card = an even 4x2 grid (2 columns on tablets). */}
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {serviceData.map((service, index) => (
+            <motion.div
+              key={service.service_title}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={index}
+              className="h-full"
+            >
+              <Link className="group block h-full" to={`/services#${service.id}`}>
+                <Card
+                  className={cn(
+                    'h-full p-8 ring-0 transition-transform duration-300 group-hover:-translate-y-1',
+                    service.service_bg_color,
+                  )}
+                >
+                  <CardContent className="flex h-full flex-col items-start justify-start gap-10 p-0">
                     <service.service_icon size={32} className={cn(service.service_text_color)} />
                     <div className="flex flex-col gap-2">
-                      <p className={cn('text-2xl font-medium', service.service_text_color)}>
+                      <p
+                        className={cn(
+                          'text-2xl font-medium lg:text-xl xl:text-2xl',
+                          service.service_text_color,
+                        )}
+                      >
                         {service.service_title}
                       </p>
                       <p
@@ -113,28 +148,36 @@ const Services = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
-            ))}
-          </div>
-          {/* cta */}
-          <div className="dark bg-background text-foreground flex w-full flex-col items-center justify-between gap-8 rounded-2xl border p-8 lg:flex-row">
-            <div className="text-center lg:text-start">
-              <p className="text-2xl font-medium">Not sure which model fits?</p>
-              <p className="text-muted-foreground text-2xl font-medium">
-                Get a free team-composition plan in 48 hours.
-              </p>
-            </div>
-            <div className="flex flex-col items-center gap-3 md:flex-row">
-              <Button asChild size="lg">
-                <Link to="/contact">
-                  Book a call <ArrowUpRight data-icon="inline-end" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link to="/how-we-work">Compare models</Link>
-              </Button>
-            </div>
-          </div>
+              </Link>
+            </motion.div>
+          ))}
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={serviceData.length}
+            className="h-full"
+          >
+            <Card className="bg-lime h-full p-8 ring-0">
+              <CardContent className="flex h-full flex-col items-start justify-between gap-10 p-0">
+                <p className="text-ink text-2xl font-medium lg:text-xl xl:text-2xl">
+                  Not sure where to start?
+                </p>
+                <div className="flex flex-col items-start gap-4">
+                  <p className="text-ink/75 text-sm leading-relaxed">
+                    Tell us the problem. We will suggest the right first step on a free discovery
+                    call.
+                  </p>
+                  <Button asChild className="bg-ink hover:bg-ink/85 text-white">
+                    <Link to="/contact">
+                      Book a call <ArrowUpRight data-icon="inline-end" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -60,44 +60,44 @@ export function FaqsSection() {
 const faqs = [
   {
     id: 'item-1',
-    title: 'How is Altavel different from a typical outsourcing agency?',
+    title: 'What kind of software do you build?',
     content:
-      'Our engineers work as an extension of your team, not a black box. You interview and approve every engineer, they work in your tools and rituals, and you get full visibility into progress and costs.',
+      'Web applications, iOS and Android apps, internal tools and portals, integrations between systems, and AI features like assistants and document processing. We also modernize legacy software and audit existing systems.',
   },
   {
     id: 'item-2',
-    title: 'What types of companies do you work with?',
+    title: 'How much does a custom software project cost?',
     content:
-      'We work with early-stage startups building their first product, growing product companies that need more velocity, and enterprises modernizing systems or launching new initiatives.',
+      'It depends on scope, so we start with a short discovery phase. After that you get a written proposal with a fixed price for each milestone. Any change to scope is priced and approved by you before we build it.',
   },
   {
     id: 'item-3',
-    title: 'How quickly can a team start?',
+    title: 'How long does it take to build?',
     content:
-      'We typically share a shortlist of candidates within days of our discovery call, and most teams are onboarded and shipping within two to four weeks.',
+      'A focused first version usually takes a few months, and larger platforms are planned in phases. You see a working release every two weeks, so progress is never a mystery.',
   },
   {
     id: 'item-4',
-    title: 'Which engagement model is right for me?',
+    title: 'Who owns the code and the product?',
     content:
-      'Staff augmentation suits teams that want to add capacity under their own management. A dedicated team suits long-term product work. Project delivery suits well-scoped builds. We will recommend a model on our first call, and you can switch later.',
+      'You do, from day one. Repositories, cloud accounts, designs, and documentation are set up in your accounts, and full IP ownership is written into our contract.',
   },
   {
     id: 'item-5',
-    title: 'How do you protect our code and data?',
+    title: 'Can you work with our existing systems?',
     content:
-      'Every engagement starts with an NDA and full IP assignment to you. We use secure, managed devices, least-privilege access, and offboarding checklists for every engineer.',
+      'Yes. We regularly integrate with existing platforms, extend software other teams started, and modernize legacy systems step by step without interrupting the business.',
   },
   {
     id: 'item-6',
-    title: 'How do you handle time zones and communication?',
+    title: 'What happens after launch?',
     content:
-      'Our teams guarantee several hours of daily overlap with your working hours, communicate in fluent English, and join your Slack, standups, and planning sessions.',
+      'Most clients choose a support plan: monitoring, security updates, bug fixes with response times in writing, helpdesk support for your users, and monthly hours for new features.',
   },
   {
     id: 'item-7',
-    title: "What if an engineer isn't the right fit?",
+    title: 'How will we stay updated during the project?',
     content:
-      'Every engagement starts with a risk-free trial period. If someone is not the right fit at any point, we replace them quickly at no extra cost.',
+      'A named delivery lead is your single point of contact. You get a shared project board, a demo every two weeks, and a short written update each week.',
   },
 ]

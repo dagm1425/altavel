@@ -20,17 +20,9 @@ function Home() {
       <Band tone="dark">
         <LogoCarousel />
       </Band>
-      <Band>
-        <Services />
-      </Band>
+      {/* Differentiators first (why, who, how), then ways to engage and what we build. */}
       <Band tone="stone">
         <WhyAltavelSection />
-      </Band>
-      <Band>
-        <AboutAndStats />
-      </Band>
-      <Band tone="dark">
-        <EngagementModelsSection />
       </Band>
       <Band>
         <AudienceSection />
@@ -39,9 +31,18 @@ function Home() {
         <ProcessSection />
       </Band>
       <Band>
-        <ExpertiseSection />
+        <AboutAndStats />
+      </Band>
+      <Band tone="dark">
+        <EngagementModelsSection />
+      </Band>
+      <Band>
+        <Services />
       </Band>
       <Band tone="stone">
+        <ExpertiseSection />
+      </Band>
+      <Band>
         <FaqsSection />
       </Band>
       <Band tone="dark">

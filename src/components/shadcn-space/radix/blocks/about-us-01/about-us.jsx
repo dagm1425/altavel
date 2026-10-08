@@ -37,7 +37,7 @@ const AboutUs = ({ aboutusData, statisticsCounter }) => {
           className="flex flex-col items-center justify-center gap-6"
         >
           <h2 className="text-foreground max-w-3xl text-center text-3xl font-medium tracking-tight text-balance sm:text-4xl lg:text-5xl">
-            An engineering partner, not a vendor. Every engagement is built on
+            We build software the way we would want it built for us, on
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-4">
             {aboutusData.map((item) => (

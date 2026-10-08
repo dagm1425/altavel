@@ -25,18 +25,18 @@ const details = [
 
 const nextSteps = [
   'We reply within one business day to schedule a call.',
-  'On a 30-minute call, we learn about your product, stack, and goals.',
-  'You receive a recommended team shape, timeline, and estimate.',
+  'On a 30-minute call, we learn about your goals, users, and existing systems.',
+  'You receive a proposed scope, timeline, and estimate in writing.',
 ]
 
 const serviceOptions = [
-  'Dedicated team',
-  'Staff augmentation',
   'Custom software development',
+  'Web or mobile app',
+  'UI/UX design',
   'AI & data',
-  'Cloud & DevOps',
-  'QA & testing',
-  'Customer support',
+  'Legacy modernization',
+  'IT audit & consulting',
+  'Maintenance & support',
   'Not sure yet',
 ]
 

@@ -36,7 +36,7 @@ export function MobileNav() {
               {navLinks.map((link) => (
                 <Button
                   asChild
-                  className="aria-[current=page]:bg-muted justify-start"
+                  className="aria-[current=page]:bg-white/15 aria-[current=page]:text-white justify-start"
                   key={link.label}
                   variant="ghost"
                 >
@@ -49,7 +49,7 @@ export function MobileNav() {
             <div className="mt-12 flex flex-col gap-2">
               <Button asChild className="w-full">
                 <Link onClick={() => setOpen(false)} to="/contact">
-                  Book a call
+                  Start a project
                 </Link>
               </Button>
             </div>
