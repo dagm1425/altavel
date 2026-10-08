@@ -23,7 +23,7 @@ export const ORGANIZATION = {
 // have real content.
 export const PAGES = {
   '/': {
-    title: 'Altavel | Custom Software & AI Development in Austin',
+    title: 'Altavel | Custom Software & AI Development',
     description:
       'Altavel designs, builds, and supports custom web, mobile, and AI software for growing businesses, with clear milestones and code you own. Austin, TX.',
   },
@@ -38,7 +38,7 @@ export const PAGES = {
       'Fixed-scope projects, phased product builds, or ongoing support. See the four stages every project follows and the standards behind every release.',
   },
   '/about': {
-    title: 'About Altavel | Software Development Company, Austin TX',
+    title: 'About Altavel | Custom Software Development Company',
     description:
       'Altavel builds custom software that lasts, with written scope, a working release every two weeks, and code our clients own from day one.',
   },
