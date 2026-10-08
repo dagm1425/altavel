@@ -23,7 +23,7 @@ export const ORGANIZATION = {
 // have real content.
 export const PAGES = {
   '/': {
-    title: 'Altavel | Custom Software Development Company in Austin',
+    title: 'Altavel | Custom Software & AI Development in Austin',
     description:
       'Altavel designs, builds, and supports custom web, mobile, and AI software for growing businesses, with clear milestones and code you own. Austin, TX.',
   },

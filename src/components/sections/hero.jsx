@@ -28,9 +28,9 @@ export function HeroSection() {
           <HeroColorPanelsContent className="md:px-4 lg:pl-0 xl:pl-0">
             {/* Same styling as the component's default heading, but as the page's h1. */}
             <HeroColorPanelsHeading>
-              <h1 className="3xl:text-8xl relative mb-0 text-3xl font-medium tracking-[-0.04em] text-balance sm:text-4xl md:text-5xl lg:tracking-[-0.06em] xl:text-6xl 2xl:text-7xl">
-                Custom software, <br />
-                <Accent>built to last</Accent>
+              <h1 className="3xl:text-7xl relative mb-0 text-3xl font-medium tracking-[-0.04em] text-balance sm:text-4xl md:text-5xl lg:text-4xl lg:tracking-[-0.06em] xl:text-5xl 2xl:text-6xl">
+                Custom software and AI, <br />
+                <Accent>built around your business</Accent>
               </h1>
             </HeroColorPanelsHeading>
             <HeroColorPanelsDescription description="Altavel is a software engineering company. We design, build, and support web, mobile, and AI products for growing businesses, with clear milestones and code you own from day one." />
