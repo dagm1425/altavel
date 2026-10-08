@@ -27,9 +27,10 @@ const statisticsCounter = [
     suffix: '+',
   },
   {
-    title: 'Years building software',
-    count: 10,
-    suffix: '+',
+    // Matches the 8 industries in the "Industries we build for" section.
+    title: 'Industries served',
+    count: 8,
+    suffix: '',
   },
   {
     title: 'Service practices, one team',
