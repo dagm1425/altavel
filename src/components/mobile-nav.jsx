@@ -36,7 +36,7 @@ export function MobileNav() {
               {navLinks.map((link) => (
                 <Button
                   asChild
-                  className="aria-[current=page]:bg-white/15 aria-[current=page]:text-white justify-start"
+                  className="justify-start aria-[current=page]:bg-white/15 aria-[current=page]:text-white"
                   key={link.label}
                   variant="ghost"
                 >

@@ -6,6 +6,8 @@ import { Field, FieldGroup, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { DecorIcon } from '@/components/decor-icon'
+import { LinkedinIcon } from '@/components/icons/linkedin-icon'
+import { LINKEDIN_URL } from '@/seo/site'
 import { CheckCircle2Icon, ClockIcon, MapPinIcon } from 'lucide-react'
 
 // Adapted from Efferd's contact-5 block.
@@ -21,6 +23,7 @@ const emailjsConfig = {
 const details = [
   { title: 'Response time', value: 'Within one business day', icon: ClockIcon },
   { title: 'Office', value: '9705 Burnet Road Suite 102, Austin, TX 78758', icon: MapPinIcon },
+  { title: 'LinkedIn', value: 'Follow Altavel', href: LINKEDIN_URL, icon: LinkedinIcon },
 ]
 
 const nextSteps = [
@@ -73,7 +76,18 @@ export function ContactSection() {
                 </span>
                 <div className="flex flex-col">
                   <span className="text-muted-foreground text-xs">{item.title}</span>
-                  <span>{item.value}</span>
+                  {item.href ? (
+                    <a
+                      className="hover:underline"
+                      href={item.href}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <span>{item.value}</span>
+                  )}
                 </div>
               </li>
             ))}

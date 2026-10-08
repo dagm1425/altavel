@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
+import { LINKEDIN_URL } from '@/seo/site'
 import { cn } from '@/lib/utils'
-import { GithubIcon } from '@/components/icons/github-icon'
 import { LinkedinIcon } from '@/components/icons/linkedin-icon'
 import { XIcon } from '@/components/icons/x-icon'
 import { Logo } from '@/components/logo'
@@ -87,7 +87,6 @@ const company = [
 
 // Placeholder profile URLs: replace with Altavel's real accounts.
 const socialLinks = [
-  { label: 'LinkedIn', icon: <LinkedinIcon />, link: '#' },
+  { label: 'LinkedIn', icon: <LinkedinIcon />, link: LINKEDIN_URL },
   { label: 'X', icon: <XIcon />, link: '#' },
-  { label: 'GitHub', icon: <GithubIcon />, link: '#' },
 ]

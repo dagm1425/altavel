@@ -4,6 +4,7 @@
 
 export const SITE_NAME = 'Altavel'
 export const DEFAULT_OG_IMAGE = '/og-image.png'
+export const LINKEDIN_URL = 'https://www.linkedin.com/company/altaveltech/'
 
 export const ORGANIZATION = {
   name: 'Altavel',
@@ -118,6 +119,7 @@ export function getStructuredData(siteUrl) {
     description: ORGANIZATION.description,
     address: { '@type': 'PostalAddress', ...ORGANIZATION.address },
     areaServed: 'US',
+    sameAs: [LINKEDIN_URL],
     knowsAbout: [
       'Custom software development',
       'Web application development',

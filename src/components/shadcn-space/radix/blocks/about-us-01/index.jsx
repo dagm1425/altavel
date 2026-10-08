@@ -19,7 +19,7 @@ const aboutusData = [
   },
 ]
 
-// Placeholder figures (first two): replace with Altavel's real numbers before launch.
+// "Products shipped" is still a placeholder: replace with Altavel's real number.
 const statisticsCounter = [
   {
     title: 'Products shipped for clients',
@@ -27,8 +27,8 @@ const statisticsCounter = [
     suffix: '+',
   },
   {
-    title: 'Engineers and designers',
-    count: 30,
+    title: 'Years building software',
+    count: 10,
     suffix: '+',
   },
   {
